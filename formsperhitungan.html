@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rumus Matematika</title>
+        <link rel="stylesheet" href="form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>*********RUMUS*********</h1>
+        </header>
+            <form class="segi-empat">
+                <h1>Rumus <br> Segi empat</h1>
+                <input type="text" name="Sisi" id="Sisi" value ="" placeholder="masukkan sisi">
+                <br><br>
+                <input type="button" id="btnHitung" onclick="hitungLLuasKKeliling()" value=" Hitung">
+                <br><br>
+                <input type="text" name="potLuas" id="potLuas" value="" placeholder="Hasil luas">
+                <br><br>
+                <input type="text" name="potKeling" id="potKeliling" value="" placeholder="Hasil Kelliling">
+            </form>
+        <script>
+            function hitungLLuasKKeliling() {
+                var Sisi = document.getElementById("Sisi").value;
+                var Luas = Sisi*Sisi;
+                var Keliling = 4*Sisi;
+                document.getElementById("potLuas").value = Luas;
+                document.getElementById("potKeliling").value = Keliling;
+            }
+        </script>
+            <form class="segi-panjang">
+                <h1>Rumus <br> segi panjang</h1>
+                <input type="text" name="ppanjang" id="ppanjang" value ="" placeholder="masukkan panjang">
+                <br><br>
+                <input type="text" name="llebar" id="llebar" value="" placeholder="masukkan lebar">
+                <br><br>
+                <input type="button" id="btnHitung" onclick="hitunglluas()" value=" Hitung">
+                <br><br>
+                <input type="text" name="lluas" id="lluas" value="" placeholder="Hasil luas">
+                <br><br>
+                <input type="text" name="kkeling" id="kkeliling" value="" placeholder="Hasil Kelliling">
+            </form>
+        <script>
+            function hitunglluas() {
+                var ppanjang = document.getElementById("ppanjang").value;
+                var llebar = document.getElementById("llebar").value;
+                var lluas = ppanjang * llebar;
+                var kkeliling = 2*ppanjang + 2*llebar;
+                document.getElementById("lluas").value = lluas;
+                document.getElementById("kkeliling").value = kkeliling;
+            }
+        </script>
+        <hr><hr><hr>
+            <form class="lingkaran">
+                <h1>Rumus <br> lingkaran</h1>
+                <input type="text" name="jari" id="jari" value="" placeholder="masukkan jari-jari">
+                <br><br>
+                
+                <input type="button" onclick="hitung()" value="Hitung">
+                <br><br>
+                <input type="text" name="luas" id="luas" value="" placeholder="Hasil luas">
+                <br><br>
+                <input type="text" name="keliling" id="keliling" value="" placeholder="Hasil Kelliling">
+            </form>
+            <script>
+                var phi = 3.14
+                var luas;
+                var kelilling;
+                var r;
+                var d;
+                function hitung() {
+                r = parseFloat(document.getElementById("jari").value);
+                luas = phi * r * r;
+                d = 2 * r;
+                keliling = phi * d;
+                document.getElementById("luas").value = luas;
+                document.getElementById("keliling").value = keliling;
+                }
+            </script>
+            <form class="segi-tiga">
+                <h1>Rumus <br> Segi tiga </h1>
+                <input type="text" name="txtAlas" id="txtAlas" value ="" placeholder="masukkan alas">
+                <br><br>
+                <input type="text" name="txtTinggi" id="txtTinggi" value="" placeholder="masukkan tinggi">
+                <br><br>
+                <input type="button" id ="btnHitung" onclick="hitungLuas()" value="Hitung">
+                <br><br>
+                <input type="text" name="txtLuas" id="txtLuas" value ="" placeholder="hasil luas">
+            </form>
+            <script>
+                function hitungLuas(){
+                var alas = document.getElementById("txtAlas").value;
+                var tinggi = document.getElementById("txtTinggi").value;
+                Luas = 1/2 * alas * tinggi;
+                document.getElementById("txtLuas").value = Luas;
+                }
+            </script>
+    </body>
+</html>
